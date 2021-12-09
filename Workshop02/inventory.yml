@@ -1,0 +1,7 @@
+all:
+  hosts:
+    myserver:
+      ansible_host: 128.199.93.19
+      ansible_user: root
+      ansible_connection: ssh
+      ansible_private_key_file: ws
