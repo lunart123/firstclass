@@ -31,6 +31,12 @@ ssh_username = "root"
 build {
 sources = [
 "source.digitalocean.mydroplet"
-
-]
+ provisioner ansible {
+        playbook_file = "./playbook.yaml"
+        extra_arguments = [
+            "-e", "public_key_file=${var.public_key}"
+        ]
+        ]
+ }
 }
+
